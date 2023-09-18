@@ -1,0 +1,467 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Swiper-->
+<section>
+    <div class="swiper-container swiper-slider swiper-slider_fullheight bg-gray-dark" data-simulate-touch="false" data-loop="true" data-autoplay="5500">
+        <div class="swiper-wrapper">
+            @await Html.PartialAsync("_ShowSliders")
+
+            @*    <div class="swiper-slide" data-slide-bg="images/slider-slide-1-1920x1080.jpg">
+            <div class="swiper-slide-caption text-center">
+            <div class="container">
+            <div class="row justify-content-lg-center">
+            <div class="col-lg-10">
+            <h1 class="heading-decorated" data-caption-animate="fadeInUpSmall" data-caption-delay="100">Construction</h1>
+            <h4 class="text-boxed" data-caption-animate="fadeInUpSmall" data-caption-delay="300">See how a 10-stories tower's being built, in a time-lapse!</h4><a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="projects.html">See Our Recent Projects</a>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>*@
+
+            @*    <div class="swiper-slide text-center" data-slide-bg="images/slider-slide-3-1920x1080.jpg">
+            <div class="swiper-slide-caption">
+            <div class="container">
+            <div class="row justify-content-lg-center">
+            <div class="col-lg-10">
+            <h1 class="heading-decorated" data-caption-animate="fadeInUpSmall" data-caption-delay="100">Projects</h1>
+            <h4 data-caption-animate="fadeInUpSmall" data-caption-delay="300">This year we took more complex constructions than ever before...</h4><a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="projects.html">See Our Recent Projects</a>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>*@
+
+        </div>
+        <!-- Swiper Pagination-->
+        <div class="swiper-pagination"></div>
+        <!-- Swiper Navigation-->
+        <div class="swiper-button-prev linear-icon-chevron-left"></div>
+        <div class="swiper-button-next linear-icon-chevron-right"></div>
+    </div>
+
+</section>
+
+
+
+<!-- Projects-->
+<section class="bg-default">
+    <div class="container-fluid container-flex">
+        <div class="row no-gutters">
+
+
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+
+                <!-- Thumb creative-->
+                <div class="thumb-creative">
+                    <div class="thumb-creative__inner">
+                        <div class="thumb-creative__front">
+                            <figure class="thumb-creative__image-wrap">
+                                <img class="thumb-creative__image" src="~/images/HomeService/1.jpg" alt="" width="480" height="361" />
+                            </figure>
+                            <div class="thumb-creative__content">
+                                <h6>COMMERCIAL</h6>
+                            </div>
+                        </div>
+                        <div class="thumb-creative__back">
+                            <figure class="thumb-creative__image-wrap">
+                                <img class="thumb-creative__image" src="/images/HomeService/1.jpg" alt="" width="480" height="361" />
+                            </figure>
+                            <div class="thumb-creative__content">
+                                <h6 class="thumb-creative__title"><a href="project-category.html">COMMERCIAL</a></h6>
+                                <p>It’s probably the most diverse category of construction to work in. But we’ve got experience…</p><a class="button button-link" href="project-category.html">View projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <!-- Thumb creative-->
+                <div class="thumb-creative">
+                    <div class="thumb-creative__inner">
+                        <div class="thumb-creative__front">
+                            <figure class="thumb-creative__image-wrap">
+                                <img class="thumb-creative__image" src="~/images/HomeService/2.jpg" alt="" width="480" height="361" />
+                            </figure>
+                            <div class="thumb-creative__content">
+                                <h6>CULTURAL / LIFESTYLE</h6>
+                            </div>
+                        </div>
+                        <div class="thumb-creative__back">
+                            <figure class="thumb-creative__image-wrap">
+                                <img class="thumb-creative__image" src="~/images/HomeService/2.jpg" alt="" width="480" height="361" />
+                            </figure>
+                            <div class="thumb-creative__content">
+                                <h6 class="thumb-creative__title"><a href="project-category.html">CULTURAL / LIFESTYLE</a></h6>
+                                <p>Working on a socially important building, such as a park involves additional landscape construction expertise.…</p><a class="button button-link" href="project-category.html">View projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <!-- Thumb creative-->
+                <div class="thumb-creative">
+                    <div class="thumb-creative__inner">
+                        <div class="thumb-creative__front">
+                            <figure class="thumb-creative__image-wrap">
+                                <img class="thumb-creative__image" src="~/images/HomeService/3.jpg" alt="" width="480" height="361" />
+                            </figure>
+                            <div class="thumb-creative__content">
+                                <h6>DATA / TECHNOLOGY</h6>
+                            </div>
+                        </div>
+                        <div class="thumb-creative__back">
+                            <figure class="thumb-creative__image-wrap">
+                                <img class="thumb-creative__image" src="~/images/HomeService/3.jpg" alt="" width="480" height="361" />
+                            </figure>
+                            <div class="thumb-creative__content">
+                                <h6 class="thumb-creative__title"><a href="project-category.html">DATA / TECHNOLOGY</a></h6>
+                                <p>While building a headquarters building for an IT company is relativly easy, we’ve also…</p><a class="button button-link" href="project-category.html">View projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <!-- Thumb creative-->
+                <div class="thumb-creative">
+                    <div class="thumb-creative__inner">
+                        <div class="thumb-creative__front">
+                            <figure class="thumb-creative__image-wrap">
+                                <img class="thumb-creative__image" src="~/images/HomeService/4.jpg" alt="" width="480" height="361" />
+                            </figure>
+                            <div class="thumb-creative__content">
+                                <h6>EDUCATIONAL</h6>
+                            </div>
+                        </div>
+                        <div class="thumb-creative__back">
+                            <figure class="thumb-creative__image-wrap">
+                                <img class="thumb-creative__image" src="~/images/HomeService/4.jpg" alt="" width="480" height="361" />
+                            </figure>
+                            <div class="thumb-creative__content">
+                                <h6 class="thumb-creative__title"><a href="project-category.html">EDUCATIONAL</a></h6>
+                                <p>Educational institutions can be much more creative than your regular school or a college campus!…</p><a class="button button-link" href="project-category.html">View projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <!-- Thumb creative-->
+                <div class="thumb-creative">
+                    <div class="thumb-creative__inner">
+                        <div class="thumb-creative__front">
+                            <figure class="thumb-creative__image-wrap">
+                                <img class="thumb-creative__image" src="~/images/HomeService/5.jpg" alt="" width="480" height="361" />
+                            </figure>
+                            <div class="thumb-creative__content">
+                                <h6>GOVERNMENT / MILITARY</h6>
+                            </div>
+                        </div>
+                        <div class="thumb-creative__back">
+                            <figure class="thumb-creative__image-wrap">
+                                <img class="thumb-creative__image" src="~/images/HomeService/5.jpg" alt="" width="480" height="361" />
+                            </figure>
+                            <div class="thumb-creative__content">
+                                <h6 class="thumb-creative__title"><a href="project-category.html">GOVERNMENT / MILITARY</a></h6>
+                                <p>The US military and States governments used our expertise and manpower to build numerous military-grade…</p><a class="button button-link" href="project-category.html">View projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <!-- Thumb creative-->
+                <div class="thumb-creative">
+                    <div class="thumb-creative__inner">
+                        <div class="thumb-creative__front">
+                            <figure class="thumb-creative__image-wrap">
+                                <img class="thumb-creative__image" src="~/images/HomeService/6.jpg" alt="" width="480" height="361" />
+                            </figure>
+                            <div class="thumb-creative__content">
+                                <h6>HEALTHCARE</h6>
+                            </div>
+                        </div>
+                        <div class="thumb-creative__back">
+                            <figure class="thumb-creative__image-wrap">
+                                <img class="thumb-creative__image" src="~/images/HomeService/6.jpg" alt="" width="480" height="361" />
+                            </figure>
+                            <div class="thumb-creative__content">
+                                <h6 class="thumb-creative__title"><a href="project-category.html">HEALTHCARE</a></h6>
+                                <p>We can build any type of healthcare buildings. From a small private medical clinic to…</p><a class="button button-link" href="project-category.html">View projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <!-- Thumb creative-->
+                <div class="thumb-creative">
+                    <div class="thumb-creative__inner">
+                        <div class="thumb-creative__front">
+                            <figure class="thumb-creative__image-wrap">
+                                <img class="thumb-creative__image" src="~/images/HomeService/7.jpg" alt="" width="480" height="361" />
+                            </figure>
+                            <div class="thumb-creative__content">
+                                <h6>MANUFACTURING / INDUSTRIAL</h6>
+                            </div>
+                        </div>
+                        <div class="thumb-creative__back">
+                            <figure class="thumb-creative__image-wrap">
+                                <img class="thumb-creative__image" src="~/images/HomeService/7.jpg" alt="" width="480" height="361" />
+                            </figure>
+                            <div class="thumb-creative__content">
+                                <h6 class="thumb-creative__title"><a href="project-category.html">MANUFACTURING / INDUSTRIAL</a></h6>
+                                <p>Building a manufacturing facility or a factory house can be much more challenging than building…</p><a class="button button-link" href="project-category.html">View projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <!-- Thumb creative-->
+                <div class="thumb-creative">
+                    <div class="thumb-creative__inner">
+                        <div class="thumb-creative__front">
+                            <figure class="thumb-creative__image-wrap">
+                                <img class="thumb-creative__image" src="~/images/HomeService/8.jpg" alt="" width="480" height="361" />
+                            </figure>
+                            <div class="thumb-creative__content">
+                                <h6>WAREHOUSE / LOGISTICS</h6>
+                            </div>
+                        </div>
+                        <div class="thumb-creative__back">
+                            <figure class="thumb-creative__image-wrap">
+                                <img class="thumb-creative__image" src="~/images/HomeService/8.jpg" alt="" width="480" height="361" />
+                            </figure>
+                            <div class="thumb-creative__content">
+                                <h6 class="thumb-creative__title"><a href="project-category.html">WAREHOUSE / LOGISTICS</a></h6>
+                                <p>While building a warehouse for an e-store is no easy feat itself, think about building…</p><a class="button button-link" href="project-category.html">View projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Our Services-->
+@*<section class="section-md bg-default text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h4 class="heading-decorated">Our Services</h4>
+            </div>
+        </div>
+        <div class="row row-50 justify-content-md-center justify-content-lg-start">
+            <div class="col-md-6 col-xl-4">
+                <!-- Blurb circle-->
+                <article class="blurb blurb-circle">
+                    <div class="unit flex-column flex-sm-row unit-spacing-md">
+                        <div class="unit-left">
+                            <div class="blurb-circle__icon"><span class="icon linear-icon-pencil-ruler"></span></div>
+                        </div>
+                        <div class="unit-body">
+                            <p class="heading-6 blurb__title"><a href="single-service.html">Pre-construction Services</a></p>
+                            <p>We take our time on initial planning before any construction begins, to balance all the financial and efficiency issues beforehand...</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <!-- Blurb circle-->
+                <article class="blurb blurb-circle">
+                    <div class="unit flex-column flex-sm-row unit-spacing-md">
+                        <div class="unit-left">
+                            <div class="blurb-circle__icon"><span class="icon linear-icon-users"></span></div>
+                        </div>
+                        <div class="unit-body">
+                            <p class="heading-6 blurb__title"><a href="single-service.html">General Contracting</a></p>
+                            <p>We have a long list of professional contractors, whom our engineers and architects enjoy to work with on a majority of our projects!</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <!-- Blurb circle-->
+                <article class="blurb blurb-circle">
+                    <div class="unit flex-column flex-sm-row unit-spacing-md">
+                        <div class="unit-left">
+                            <div class="blurb-circle__icon"><span class="icon linear-icon-wall"></span></div>
+                        </div>
+                        <div class="unit-body">
+                            <p class="heading-6 blurb__title"><a href="single-service.html">Construction Services</a></p>
+                            <p>Our customers love the pace/quality tempo that we show during each of the principal construction processes!</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <!-- Blurb circle-->
+                <article class="blurb blurb-circle">
+                    <div class="unit flex-column flex-sm-row unit-spacing-md">
+                        <div class="unit-left">
+                            <div class="blurb-circle__icon"><span class="icon linear-icon-apartment"></span></div>
+                        </div>
+                        <div class="unit-body">
+                            <p class="heading-6 blurb__title"><a href="single-service.html">Construction Management</a></p>
+                            <p>Construction project management is essential. We're using the most time and iterations efficient life cycles methods for that.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <!-- Blurb circle-->
+                <article class="blurb blurb-circle">
+                    <div class="unit flex-column flex-sm-row unit-spacing-md">
+                        <div class="unit-left">
+                            <div class="blurb-circle__icon"><span class="icon linear-icon-home4"></span></div>
+                        </div>
+                        <div class="unit-body">
+                            <p class="heading-6 blurb__title"><a href="single-service.html">Building Information Modeling (BIM)</a></p>
+                            <p>Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <!-- Blurb circle-->
+                <article class="blurb blurb-circle">
+                    <div class="unit flex-column flex-sm-row unit-spacing-md">
+                        <div class="unit-left">
+                            <div class="blurb-circle__icon"><span class="icon linear-icon-pencil-ruler2"></span></div>
+                        </div>
+                        <div class="unit-body">
+                            <p class="heading-6 blurb__title"><a href="single-service.html">Design-Build</a></p>
+                            <p>If a project is not too complex, we may hire a designer-builder type of contractor, to make the longevity of the construction shorter</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>*@
+
+@*========================================*@
+
+@*<!-- Our History-->
+<section class="section-md bg-gray-lighter">
+    <div class="container">
+        <div class="row justify-content-md-center row-30 row-md-50">
+            <div class="col-md-11 col-lg-10 col-xl-6">
+                <h4 class="heading-decorated">MISSION & VISION</h4>
+                <p class="heading-6 text-width-1">
+                    Our mission is to build on the core strengths in our portfolios and combine
+                    this with intelligent diversification to achieve strong and sustainable
+                    profitable growth. Sustainability and quality customer service run through
+                    the veins of everything we do supporting our vision to be an employer and
+                    business partner of choice, both in the UAE and further afield.
+                </p>
+                <p>
+                    We offer
+                    commitment at all levels of building project, from preparing for
+                    construction to construction management services. For years, we have
+                    successfully met our client’s demand for cost effective and responsive
+                    services.
+                    The Contracting industry is one of the focal pillars in any growing
+                    country or city, Fujairah is one fertile place we will kick-off our business in,
+                    to be part of the builders of our beloved city.
+                    At DCC, we are hiring industry
+                    experts and young motivated soldiers to complete and deliver the industry’s
+                    latest, systems, technologies and methodologies. We will endeavor to
+                    cooperate and support the relation between DCC and other governmental
+                    and private sector leaders for the benefits of all parties.
+
+                </p><a class="button button-primary" href="about.html">Read more</a>
+            </div>
+            <div class="col-md-11 col-lg-10 col-xl-6">
+                <img src="images/home-1-652x491.jpg" alt="" width="652" height="491" />
+            </div>
+        </div>
+    </div>
+</section>*@
+
+
+<!-- Posts-->
+<section class="section-md bg-default">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h4 class="heading-decorated">Recent News</h4>
+            </div>
+        </div>
+        <div class="row row-60">
+            <div class="col-md-6 col-xl-4">
+                <!-- Post classic-->
+                <article class="post-classic post-minimal">
+                    <img src="images/home-post-1-418x315.jpg" alt="" width="418" height="315" />
+                    <div class="post-classic-title">
+                        <h6><a href="standard-post.html">Future proofing hospitals</a></h6>
+                    </div>
+                    <div class="post-meta">
+                        <div class="group">
+                            <a href="standard-post.html">
+                                <time datetime="2021">Jan.20, 2021</time>
+                            </a><a class="meta-author" href="standard-post.html">by Brian Williamson</a>
+                        </div>
+                    </div>
+                    <div class="post-classic-body">
+                        <p>By improving the physical layout of hospitals and medical facilities, we can enhance and increase safety mechanisms, improve care, and…</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <!-- Post classic-->
+                <article class="post-classic post-minimal">
+                    <img src="images/home-post-2-418x315.jpg" alt="" width="418" height="315" />
+                    <div class="post-classic-title">
+                        <h6><a href="image-post.html">Bike parts warehouse, DE</a></h6>
+                    </div>
+                    <div class="post-meta">
+                        <div class="group">
+                            <a href="image-post.html">
+                                <time datetime="2021">Jan.20, 2021</time>
+                            </a><a class="meta-author" href="image-post.html">by Brian Williamson</a>
+                        </div>
+                    </div>
+                    <div class="post-classic-body">
+                        <p>Delaware proved to be a very friendly place to work at… While invited there for completing a mid-sized warehouse for…</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <!-- Post classic-->
+                <article class="post-classic post-minimal">
+                    <img src="images/home-post-3-418x315.jpg" alt="" width="418" height="315" />
+                    <div class="post-classic-title">
+                        <h6><a href="gallery-post.html">Joy Hotel & Casino</a></h6>
+                    </div>
+                    <div class="post-meta">
+                        <div class="group">
+                            <a href="gallery-post.html">
+                                <time datetime="2021">Jan.20, 2021</time>
+                            </a><a class="meta-author" href="gallery-post.html">by Brian Williamson</a>
+                        </div>
+                    </div>
+                    <div class="post-classic-body">
+                        <p>This hotel & casino complex is our most recent completed building… The whole structure that took us 6 months to…</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+*@

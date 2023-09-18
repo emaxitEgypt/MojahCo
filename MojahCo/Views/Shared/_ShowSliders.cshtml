@@ -1,0 +1,34 @@
+﻿@using Microsoft.EntityFrameworkCore;
+@using MojahCo.Data;
+@{
+    var data = ViewBag.Context as ApplicationDbContext;
+    var sliders = data.Sliders.ToList();
+}
+
+
+@foreach(Slider slider in sliders)
+{
+    <div class="swiper-slide" data-slide-bg="images/banner/@slider.SliderImage">
+        <div class="swiper-slide-caption text-center">
+            <div class="container">
+                <div class="row justify-content-lg-center">
+                    <div class="col-lg-10">
+                        <h2 class="heading-decorated" data-caption-animate="fadeInUpSmall" data-caption-delay="100">@*@slider.ShortDescription*@</h2>
+
+                        <p class="text-boxed text-white" style="font-size:20pt;" data-caption-animate="fadeInUpSmall" data-caption-delay="300">
+                           @slider.LongDescription
+                        </p>
+                       
+                        <a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="@Url.Action("About","Home")">See More</a>
+                        
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <img src="~/images/4.png" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+}

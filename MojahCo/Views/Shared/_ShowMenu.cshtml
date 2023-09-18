@@ -1,0 +1,164 @@
+﻿@using Microsoft.EntityFrameworkCore;
+@using MojahCo.Data;
+@{
+    var data = ViewBag.Context as ApplicationDbContext;
+    var menu = data.Menus.ToList();
+
+    List<Menu> GetChild(int id) // Pass parent Id
+    {
+            List<Menu> list = new List<Menu>();
+        
+            if (data.Menus.Any(x => x.ParentId == id))
+            {
+                var childList = data.Menus.Where(x => x.ParentId == id).ToList();
+                list.AddRange(childList);
+                return list;
+                //foreach (var item in childList)
+                //{
+                //    <></>
+                //    GetChild(item.MenuId);
+            //}
+            }
+            else
+            {
+                return new List<Menu>();
+            }
+        
+    }
+
+
+
+}
+
+@*<div class="rd-navbar-search_collapsable">
+    <ul class="rd-navbar-nav">
+        <li class="active">
+            <a href="@Url.Action("Index","Home")">Home</a>
+        </li>
+
+        <li>
+            <a href="@Url.Action("Shop","Home")">Shop</a>
+        </li>
+
+        <li>
+            <a href="@Url.Action("About","Home")">About</a>
+        </li>
+
+        <li>
+            <a href="services.html">Services</a>
+            <ul class="rd-navbar-dropdown">
+                
+                <li>
+                    <a href="single-service.html">Electrical Elevators</a>
+                </li>
+
+                <li>
+                    <a href="single-service.html">Stairs And Electric Walkers</a>
+                </li> 
+
+                <li>
+                    <a href="single-service.html">Operation And Maintenance Sector</a>
+                </li> 
+                
+                <li>
+                    <a href="single-service.html">Refrigeration And Air Conditioning Sector</a>
+                </li>  
+                
+                <li>
+                    <a href="single-service.html">Security Systems Sector Cameras</a>
+                </li>
+                    
+                <li>
+                    <a href="single-service.html">Landscape</a>
+                </li>
+                     
+                <li>
+                    <a href="single-service.html">Facade Cleaning Sector</a>
+                </li>   
+                
+                <li>
+                    <a href="single-service.html">Safety And Fire Extinguishing Systems</a>
+                </li>  
+                
+                <li>
+                    <a href="single-service.html">Industries And Aluminum Sector Cladding</a>
+                </li>   
+                
+                <li>
+                    <a href="single-service.html">Telecom And Internet Extension Systems</a>
+                    <ul class="rd-navbar-dropdown">
+                        <li>
+                            <a href="project-category.html">Operation And Management Of Hotels</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="single-service.html">Construction</a>
+                </li>
+
+                <li>
+                    <a href="single-service.html">Contacts</a>
+                </li>
+            
+            </ul>
+        </li>
+
+
+        <li>
+            <a href="contacts.html">Contacts</a>
+        </li>
+    </ul>
+</div>*@
+
+<div class="rd-navbar-search_collapsable">
+    <ul class="rd-navbar-nav">
+        @foreach(var i in menu)
+        {
+            if(i.ParentId == 0 && i.HasSub==false) 
+            {
+                if(i.MenuId != 2)
+                {
+                    <li >
+                        <a href="@Url.Action(@i.ServiceLink,"Home")" target="_blank">@i.MenuName</a>
+                    </li>
+                }
+            }
+
+            else if (i.ParentId == 0 && i.HasSub == true)
+            {
+                <li>    
+                    <a href="#">@i.MenuName</a>
+                    
+                    <ul class="rd-navbar-dropdown">
+                        @foreach (var j in menu.Where(a=>a.ParentId == i.MenuId ))
+                        {
+                            <li>
+                                @{
+                                    var sid = data.Services.FirstOrDefault(a => a.ServiceName.Equals(j.MenuName)).ServiceId;
+                                }
+                                
+                                <a href="@Url.Action("ServicesDtl","Home",new{serviceId = sid})"> @j.MenuName </a>
+                                    @{var lst = GetChild(j.MenuId);}
+                                    @if(lst.Count()!=0){
+                                <ul class="rd-navbar-dropdown">
+                                   
+                                    @foreach (var m in lst)
+                                    {
+                                        <li>
+                                                <a href="@Url.Action("ServicesDtl","Home",new{serviceId = j.MenuName})"> @m.MenuName </a>
+                                        </li>
+
+                                    }
+                                </ul>}
+                            </li>
+                        }
+
+                    </ul>
+                </li>
+            }   
+        }
+
+    </ul>
+</div>
+
